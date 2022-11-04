@@ -133,9 +133,17 @@ Padding og margin fjernes, margin og border regnes med i bredden.
 }
 
 .forside img { 
-  width: 100%;
-  height: 500px;
+
   object-fit: cover;
+  width: 0px;
+  height: 500px;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes example {
+  from {width:0px;}
+  to {width:100%;}
 }
 
 /* HEADER: */
@@ -158,7 +166,18 @@ header{
 Logo og burger */
 #logo > img{
   width:100%;
+  height: 100%;
+  animation-name: logo-kf;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
+
+@keyframes logo-kf {
+  from {height:0%;}
+  to {height: 200px;}
+}
+
+
 
 #navMobile > a > img{
   width:100%; 
