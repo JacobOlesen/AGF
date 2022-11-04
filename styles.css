@@ -1,0 +1,329 @@
+.nyheder {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.nyheder div {
+    width: 100%;
+    border-radius: 10px;
+    height: 384px;
+  }
+
+.nyheder div:hover {
+  opacity: 95%;
+  transition: 0.5s;
+
+}
+
+.nyheder img {
+  width: 100%;
+  border-radius: 10px;
+  height: 384px;
+}
+  
+  @media only screen and (max-width: 768px) {
+    section {
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .nyheder .kvart {
+      width: 25%;
+    }
+    .nyheder .halv {
+      width: 50%;
+    }
+  }
+
+#jubel {
+  background-image: url(images/jubel.jpg);
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+#målmand {
+  background-image: url(images/målmand.jpg);
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+#kevinyakob {
+  background-image: url(images/kevinyakob.jpg);
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+#kvinder {
+  background-image: url(images/kvinder.jpg);
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+#jubel2 {
+  background-image: url(images/jubel2.jpg);
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+#falk { 
+  background-image: url(images/falk.jpg);
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+  background-position: center;
+
+}
+
+h2 {
+  color: white;
+  font-family: 'Rokkitt', serif;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Rokkitt', serif;
+  margin-left: 20px;
+  font-size: 24px;
+  width: 80%;
+}
+
+h3 {
+  color: white;
+  font-family: 'Rokkitt', serif;
+  margin-left: 20px;
+  position: relative;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+
+
+
+
+
+/* 
+Reset:
+Padding og margin fjernes, margin og border regnes med i bredden.
+*/
+*{ 
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* MAIN */
+/* For at der er noget, som headeren kan ses i forhold til. */
+.forside {
+  height: 500px;
+}
+
+.forside img { 
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* HEADER: */
+header{
+  position:fixed;
+  top:0px;
+  width:100%;
+  height:100px;
+  z-index: 1;
+  
+  display:flex; /* For at kunne distribuere boksene inden i.*/
+  justify-content:space-around;
+  align-items:center;
+
+  background-color: #0c243c;
+  border-bottom:1px solid rgba(255,255,255,0.5); /* Den lille linje i bunden. */
+}
+
+/* Billeder skal fylde 100*% i deres container: 
+Logo og burger */
+#logo > img{
+  width:100%;
+}
+
+#navMobile > a > img{
+  width:100%; 
+}
+
+/* RESPONSIVE: */
+/* MOBIL: */
+@media screen and (max-width:768px){
+  /*Distribuer elementer anderledes:*/
+  header{
+      justify-content:space-between ;
+      padding-left:10px;
+      padding-right:10px;
+  }
+  
+  /* Skjul laptopmenuen. */
+  #navLaptop {
+      display:none; 
+  }
+
+  /* Burgermenuen skal have en bredde */
+  #navMobile{ 
+      width:50px;
+  }
+
+  #logo{ /* Logoet skal være mindre på mobil. */
+      width:80px;
+  }    
+}
+
+/* LAPTOP: */
+@media screen and (min-width: 768px){
+  /* HEADER: LOGO*/
+  #logo {/* Logoet. Er i en div fordi det spiller bedre med flexbox. */
+      width:200px;
+      margin:30px;
+      position:relative;
+      top:70px;
+  }
+
+  /* Skjul mobilmenuen.*/
+  #navMobile{
+      display:none;
+  }
+
+  /* Vis laptopmenuen og samtidig gør den til flex container. */
+  #navLaptop {
+      display:flex; 
+      justify-content:space-around;
+      width:70%;
+      gap:10px;
+  }
+
+  /* Tekstlinks: */
+  nav > a{
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-transform:uppercase;
+      color:white;
+      text-decoration:none;
+      font-size:15pt;
+      font-weight:bold;
+  }
+}
+
+.break h1 {
+  color: black;
+  font-family: 'Rokkitt', serif;
+  font-weight: 600;
+  font-size: 42px;
+  margin-left: 75px;
+  margin-top: 60px;
+}
+
+hr {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+
+
+/* CARDS: */
+/* This is the box that contains the cards. 
+Responsibility: 
+- Display the cards with flexbox, 
+- Use flex wrap to make the cards go underneath each other when there is too little space.
+- Fill out the entire browser window.
+*/
+.cards {
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  flex-wrap:wrap;
+  background-color: red;
+}
+
+/* This is the card itself. 
+This set of rules is for all sections inside the section with the class 'cards'.
+They have a fixed width for the wrapping to work!
+The height can be temporary, but they are supposed to be the same height regardless of the content.
+*/
+/* Cardscontainer med 4 felter */
+.cardscontainer4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: white
+}
+
+.cardscontainer4 div {
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+
+.cardscontainer4 div h1 {
+  color: black;
+  font-family: 'Rokkitt', serif;
+  margin-left: 25px;
+  font-size: 18px;
+  width: 80%;
+  height: 250px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.cardscontainer4 img {
+  width: 300px;
+  height: 168px;
+}
+
+.cardscontainer4 h3 {
+  color: black;
+  font-family: 'Rokkitt', serif;
+  margin-left: 25px;
+  position: relative;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+
+/* Mobile: */
+@media only screen and (max-width:768px){
+  .cardscontainer4 div{
+      width:100%;
+      margin-bottom:10px;
+      flex-direction: column ;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .cardscontainer4 div h3, .cardscontainer4 div h1{
+      width:90%;
+      margin-bottom:10px;
+      text-align: center;
+
+  }
+}
+
+/* Laptop: */
+@media only screen and (min-width:768px){
+  .cardscontainer4 div{
+      width:20%;
+      margin-bottom:20px;
+  }
+}
+
+
+
