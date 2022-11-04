@@ -13,8 +13,12 @@
   }
 
 .nyheder div:hover {
+  cursor: pointer;
   opacity: 95%;
-  transition: 0.5s;
+  transition: 0.3s;
+
+  /*box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
+  box-shadow: 0px 0px 10px 5px #888888;
 
 }
 
