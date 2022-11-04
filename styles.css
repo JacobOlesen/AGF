@@ -275,6 +275,13 @@ The height can be temporary, but they are supposed to be the same height regardl
   width: 100%;
   height: 168px;
   object-fit: cover;
+  transition: 0.3s ease-in-out;
+  
+}
+
+.cardscontainer4 img:hover{
+  scale: 120%;
+  margin-bottom: 20px;
 }
 
 .cardscontainer4 h3 {
@@ -312,6 +319,9 @@ The height can be temporary, but they are supposed to be the same height regardl
       margin-bottom:20px;
   }
 }
+
+
+
 
 
 
