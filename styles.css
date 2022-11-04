@@ -13,8 +13,10 @@
   }
 
 .nyheder div:hover {
+  cursor: pointer;
   opacity: 95%;
-  transition: 0.5s;
+  transition: 0.3s;
+  box-shadow: 5px 2px 10px 2px #888888;
 
 }
 
