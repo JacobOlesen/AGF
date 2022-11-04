@@ -235,20 +235,6 @@ hr {
 
 
 
-/* CARDS: */
-/* This is the box that contains the cards. 
-Responsibility: 
-- Display the cards with flexbox, 
-- Use flex wrap to make the cards go underneath each other when there is too little space.
-- Fill out the entire browser window.
-*/
-.cards {
-  display:flex;
-  justify-content:space-around;
-  width:100%;
-  flex-wrap:wrap;
-  background-color: red;
-}
 
 /* This is the card itself. 
 This set of rules is for all sections inside the section with the class 'cards'.
@@ -258,23 +244,22 @@ The height can be temporary, but they are supposed to be the same height regardl
 /* Cardscontainer med 4 felter */
 .cardscontainer4 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  justify-content: space-between;
   padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: white
+  margin-right: 75px;
+  margin-left: 75px;
 }
 
 .cardscontainer4 div {
-  width: 350px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   text-align: center;
 }
 
 .cardscontainer4 div h1 {
   color: black;
   font-family: 'Rokkitt', serif;
-  margin-left: 25px;
   font-size: 18px;
   width: 80%;
   height: 250px;
@@ -283,15 +268,14 @@ The height can be temporary, but they are supposed to be the same height regardl
 }
 
 .cardscontainer4 img {
-  width: 300px;
+  width: 100%;
   height: 168px;
+  object-fit: cover;
 }
 
 .cardscontainer4 h3 {
   color: black;
   font-family: 'Rokkitt', serif;
-  margin-left: 25px;
-  position: relative;
   font-weight: 200;
   font-size: 14px;
   text-align: left;
@@ -302,9 +286,9 @@ The height can be temporary, but they are supposed to be the same height regardl
 /* Mobile: */
 @media only screen and (max-width:768px){
   .cardscontainer4 div{
-      width:100%;
-      margin-bottom:10px;
+      margin-bottom: 75px;
       flex-direction: column ;
+      margin-left: 75px;
   }
 }
 
